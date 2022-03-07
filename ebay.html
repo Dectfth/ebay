@@ -12,10 +12,11 @@
         
     </style>
     <style>
-        p{
+        p,h1,h2,h3{
             margin: 0;
             padding: 0;
         }
+        
         .iconfont{
             vertical-align: middle;
         }
@@ -51,8 +52,8 @@
             max-width: 100%;
             margin-right: auto;
             margin-left: auto;
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: 0;
+            padding-right:0;
             padding-bottom: 84px;
         }
         ul{
@@ -289,18 +290,55 @@
         .slide4{
             margin-top: 60px;
         }
-        .slide4-container{
+        .slide4-container .about-product-table{
             
+        }
+        .slide4-container .about-product-table td:nth-child(odd){
+            text-align: right;
+            padding-right: 19px;
+            padding-left: 0;
+        }
+        
+        .slide4-container .about-product-table tr{
+            height: 22px;
         }
         .slide4-container .about-product{
             display: flex;
+       
+            margin-top: 60px;
+
         }
+        .slide4-container .about-product .about-product-item{
+        
+            padding: 55px 37px 0;
+    
+            background: linear-gradient(360deg, #FFFFFF 0%, #E8E8E8 100%);
+
+        }
+        .slide4-container .about-product .about-product-item h1{
+          
+            text-align: center;
+         }
+         .slide4-container .about-product .about-product-item p{
+            /* width: 100px; */
+            display: inline-block;
+            padding: 2px 8px;
+
+
+            font-size: 14px;
+            color: #fff;
+            font-weight: bold;
+            background-color: #14BAE4;
+            margin-left: 33%;
+            text-align: center;
+            margin-top: 21px;
+         }
         .about-product > div{
             width: 50%;
         }
         .about-product img{
-            width: 100%;
-            height: auto;
+            width: auto;
+            max-height: 560px;
         }
     </style>
     <!-- 切换 -->
@@ -694,14 +732,92 @@
 
     <div class="slide slide4">
         <div class="slide4-container">
+            <!-- Item specifics  1-->
             <div class="about-product">
                 <div>
                     <img src="https://img.auctiva.com/imgdata/2/0/5/8/9/5/6/webimg/1088757402_o.jpg" alt="">
-                </div>
-                <div>
+                </div>                
+                <div class="about-product-item">
                     <h1>Item specifics</h1>
                     <p>Condition</p>
-                    <table  class="about-product-table"   cellspacing="0" cellpadding="0"  >
+
+                    <table class="about-product-table" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>New:</td>
+                            <td>
+                                A brand-new, unused, unopened, undamaged item in its original packaging (where packaging is ... Read
+                                moreabout the condition
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td>2.65×1.38 ×0.55 in (67.3x35x14mm)</td>
+                        </tr>
+                        <tr>
+                            <td>connector Type:</td>
+                            <td>RJ12</td>
+
+                        </tr>
+                        <tr>
+                            <td>custom Bundle:</td>
+                            <td>NO</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>Maximum Input Voltage:</td>
+                            <td>5V</td>
+
+                        </tr>
+                        <tr>
+                            <td>Cable Length:</td>
+                            <td>5.00 m (16.4 ft)</td>
+
+                        </tr>
+                        <tr>
+                            <td>lnstallation Dimensions:</td>
+                            <td>67.3 p3.5mm (2.66 p 0.14in)</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>operation Temperature:</td>
+                            <td>-20°C~85°C (-4*F to 185°F)</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>communication Protocol:</td>
+                            <td>RS232</td>
+                        </tr>
+                        <tr>
+                            <td>Input Voltage:</td>
+                            <td>5V</td>
+                        </tr>
+                        <tr>
+                            <td>standby Power Consumption:</td>
+                            <td>0.04w</td>
+                        </tr>
+                        <tr>
+                            <td>communication Protocol:</td>
+                            <td>RS232</td>
+                        </tr>
+                        <tr>
+                            <td>Input Voltage:</td>
+                            <td>5V</td>
+                        </tr>
+                        <tr>
+                            <td>standby Power Consumption:</td>
+                            <td>0.04w</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--Item specifics 2  -->
+            <div class="about-product">
+                <div class="about-product-item">
+                  
+                    <table  class="about-product-table"   cellspacing="0" cellpadding="0"  > 
                         <tr>
                             <td>New:</td>
                             <td>
@@ -747,24 +863,107 @@
                         </tr>
                         <tr>
                             <td>communication Protocol:</td>
-                            <td>RS232</td>
-
-                    
+                            <td>RS232</td> 
                         </tr>
                         <tr>
                             <td>Input Voltage:</td>
                             <td>5V</td>
-
-                    
                         </tr>
                         <tr>
                             <td>standby Power Consumption:</td>
                             <td>0.04w</td>
-            
+                        </tr>
+                        <tr>
+                            <td>communication Protocol:</td>
+                            <td>RS232</td> 
+                        </tr>
+                        <tr>
+                            <td>Input Voltage:</td>
+                            <td>5V</td>
+                        </tr>
+                        <tr>
+                            <td>standby Power Consumption:</td>
+                            <td>0.04w</td>
+                        </tr>
+                    </table>
+                </div>                    
+                <div>
+                    <img src="https://img.auctiva.com/imgdata/2/0/5/8/9/5/6/webimg/1088757402_o.jpg" alt="">
+                </div>
+
+            </div>
+            <!-- Item specifics 3 -->
+            <div class="about-product">
+                <div>
+                    <img src="https://img.auctiva.com/imgdata/2/0/5/8/9/5/6/webimg/1088757402_o.jpg" alt="">
+                </div>                
+                <div class="about-product-item">
+                    <h1>About this product</h1>
+                    <p>Product Identifiers</p>
+
+                    <table class="about-product-table" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>New:</td>
+                            <td>
+                                A brand-new, unused, unopened, undamaged item in its original packaging (where packaging is ... Read
+                                moreabout the condition
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td>2.65×1.38 ×0.55 in (67.3x35x14mm)</td>
+                        </tr>
+                        <tr>
+                            <td>connector Type:</td>
+                            <td>RJ12</td>
+
+                        </tr>
+                        <tr>
+                            <td>custom Bundle:</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>custom Bundle:</td>
+                            <td>NO</td>
+                        </tr>
+                    </table>
+                    <!--  -->
+                    <p>Product Key Features </p>
+
+                    <table class="about-product-table" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>Size</td>
+                            <td>2.65×1.38 ×0.55 in (67.3x35x14mm)</td>
+                        </tr>
+                        <tr>
+                            <td>connector Type:</td>
+                            <td>RJ12</td>
+
+                        </tr>
+                        <tr>
+                            <td>custom Bundle:</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>custom Bundle:</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>custom Bundle:</td>
+                            <td>NO</td>
+                            <td>custom Bundle:</td>
+                            <td>NO</td>
+                       
+                        </tr>
+                        <tr>
+                            <td>Maximum Input Voltage:</td>
+                            <td>5V</td>
+                            <td>Maximum Input Voltage:</td>
+                            <td>5V</td>
+                       
                         </tr>
                     </table>
                 </div>
-
             </div>
         </div>
     </div>
