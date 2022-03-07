@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_3222625_rdnukk2swi.css">
+    <style>
+        @import url('https://img.eselt.de/assets/templates/vendor/bootstrap.v3.3.5.min.css');
+        @import url('https://img.eselt.de/fonts/vendor/font-awesome-5.1.0/css/all.css');
+        
+    </style>
+    <style>
+        .ebay-container{
+            /* width: 1200px; */
+        }
+        .col-md-6{
+            padding: 0;
+        }
+        .slide1{
+         color:#202124 ;
+         font-family: 'Roboto';
+        }
+        .flex{
+            display: flex;
+        }
+        .title{
+            background-color: #14BAE4;
+            color: #FFFFFF;
+            font-size: 18px;
+            padding: 9px 0 9px 57px;
+            text-transform: uppercase;
+        }
+        .container{
+            max-width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        ul{
+            list-style: none;
+            padding: 0 ;
+            margin: 0;
+        }
+        .icon-check{
+            font-size: 16px;
+            font-weight: 800;
+        }
+        .slide1 .menu {
+            font-family: 'Roboto';
+            font-size: 16px;
+           
+        }
+        .slide1 .menu img{
+           height: 16px;
+           width: 16px;
+        }
+
+
+        .slide1 .menu .menu__list{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+        }
+        .slide1 .menu .menu__list .menu__item{
+            flex:1;
+            text-align: center;
+            padding-bottom: 5px;
+
+        }
+        .slide1 .menu .menu__list .menu__item a{
+            color:#202124;
+            display: inline-block;
+            display: block;
+            padding: 22px 0 5px 0;
+            text-decoration: none;
+           
+        }
+        .slide1 .menu .menu__list .menu__item a i{
+            padding-right: 10px;
+        }
+        .slide1 .menu .menu__list .menu__item a span{
+            
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .slide1 .menu  .menu__list .menu__item a:hover{
+            color: #14BAE4;
+      
+        }
+        .slide1 .menu  .menu__list .menu__item a span::before{
+            content: '';
+            position: absolute;
+            height:3px ;
+            width: 90%;
+            left: 5%;
+            bottom: -3px;
+            opacity: 0;     
+            background: #14BAE4;
+            transition: all 0.3s ease;
+
+        }
+        .slide1 .menu  .menu__list .menu__item a:hover span::before{
+            bottom: 0px;
+            opacity: 1;
+         
+        }
+       
+/* ========================slide1 */
+        .slide2 {
+            height: 200px;
+            background-color: violet;
+            padding: 20px;
+        }
+        .slide3 {
+            padding-top: 80px;
+        }
+        .slide3 .order-1 h2,.slide3 .order-2 h2{
+            margin: 0;
+            
+        }
+        .slide3 .order-1 p,.slide3 .order-2 ul{
+            font-size: 14px;
+            margin: 0;
+            padding: 16px 0 8px 0;
+        } 
+        .slide3 .order-3{
+            padding-top: 40pt;
+        }
+        .slide3 .order-3 ul li {
+            color: #14BAE4;
+        }
+        .slide3 .order-3 .des-top-title-icon{
+            display: inline-block;
+            background: #13a0cd;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+        .slide3 h1{
+            text-align: center;
+            padding-bottom: 60px;
+        }
+        .slide3 .category{  
+            padding-right: 100px;
+        }
+        .slide3 .word-description{
+            /* padding-left: 51px; */
+        }
+        .displaynone{
+            display: none;
+        }
+        /* lunbo */
+        .carousel-slide img{
+            max-width: 100%;
+            cursor: pointer;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .Carousel {
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+        .Carousel-item1 { grid-area: 1 / 1 / 6 / 2; }
+        .Carousel-item2 { grid-area: 1 / 2 / 2 / 3; }
+        .Carousel-item3 { grid-area: 2 / 2 / 3 / 3; }
+        .Carousel-item4 { grid-area: 3 / 2 / 4 / 3; }
+        .Carousel-item5 { grid-area: 4 / 2 / 5 / 3; }
+        .Carousel-item6{ grid-area: 5 / 2 / 6 / 3; }
+        .carousel-slide{
+            cursor: pointer;
+            border: 5px solid transparent;
+            border-radius: 10%;
+         
+            overflow: hidden;
+        }
+        .bigimg{
+            border: 5px solid transparent;
+            border-radius: 12px;
+         
+            overflow: hidden;
+      
+            
+        }
+        .bigimg .bigimg-item,.bigimg .bigimg-item .bigimg-slide {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 0;
+            transition: all 0s 9999999s;
+            /* overflow: hidden; */
+        }
+        .bigimg .bigimg-item .bigimg-slide>* {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+        .Carousel-item2:active~.bigimg>.bigimg-item>.bigimg-slide {
+            -webkit-transition: all 0s;
+            -ms-transition: all 0s;
+            transition: all 0s;
+            transform: translateX(-0%);
+            -webkit-transform: translateX(-0%);
+            -ms-transform: translateX(-0%);
+        }
+ 
+        .Carousel-item3:active~.bigimg>.bigimg-item>.bigimg-slide {
+            -webkit-transition: all 0s;
+            -ms-transition: all 0s;
+            transition: all 0s;
+            transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+        }
+        .Carousel-item4:active~.bigimg>.bigimg-item>.bigimg-slide {
+            -webkit-transition: all 0s;
+            -ms-transition: all 0s;
+            transition: all 0s;
+            transform: translateX(-200%);
+            -webkit-transform: translateX(-200%);
+            -ms-transform: translateX(-200%);
+        }
+        .Carousel-item5:active~.bigimg>.bigimg-item>.bigimg-slide {
+            -webkit-transition: all 0s;
+            -ms-transition: all 0s;
+            transition: all 0s;
+            transform: translateX(-300%);
+            -webkit-transform: translateX(-300%);
+            -ms-transform: translateX(-300%);
+        }
+        .Carousel-item6:active~.bigimg>.bigimg-item>.bigimg-slide {
+            -webkit-transition: all 0s;
+            -ms-transition: all 0s;
+            transition: all 0s;
+            transform: translateX(-400%);
+            -webkit-transform: translateX(-400%);
+            -ms-transform: translateX(-400%);
+        }
+        .Carousel-item6:active~.big>.mid{
+            background-color: aqua;
+            transform: translateX(50%);
+        }
+        .bigimg-item{
+            overflow: hidden;
+        }
+    </style>
+    <!-- <style>
+        /* 第七个 */
+        .Carousel{
+            grid-template-columns: 5fr repeat(2, 1fr) repeat(2, 0);
+            grid-template-rows: repeat(5, 1fr);
+      
+        }
+        .Carousel-item7{ grid-area: 1 / 3 / 2 / 4; }
+    </style> -->
+    <!-- 切换 -->
+    <style>
+        .shell{
+            width: 100%;
+            height: 100%;
+            /* background-color: #000; */
+            overflow: hidden;
+            position: relative;
+        }
+        .page{
+            transform: translateX(-110%);
+  
+            width: 100%;
+            height: 100%;
+            transition: .5s;
+            background-size: cover;
+        }
+        .button{
+            display: block;
+            
+            color: #14BAE4;
+            border: 4pt solid #14BAE4;
+            border-radius: 10pt;
+            font-size: 18px;
+            padding: 21px 54px;
+        
+            text-align: center;
+            position: absolute;
+            top: 10px;
+            margin-top: 30px ;
+            left: calc(57px + (var(--i)*(22% + 57px)));
+            z-index: 999;
+            transition: .3s;
+        }
+        .button i{
+            font-size: 34px;
+        }
+        .page_content{
+            box-sizing: border-box;
+            height: 100%;
+            /* padding: 50px; */
+            padding-top: 140px;
+            color: #202124;
+ 
+            display: none;
+            animation-name: fade;
+            animation-duration: .7s;
+            animation-iteration-count: 1;
+            opacity: 1;
+        }
+        .page_content .table-title {
+            font-size: 16pt;
+            padding: 11px 0 9px 57px;
+            background: linear-gradient(to right,#B9B9B9,#FFFFFF);
+            
+            margin: 30px 0 11px 0;
+        }
+        @keyframes fade{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        input{
+            display: none;
+        }
+        input:checked+.page{
+            transform: translateX(0px);
+            transition: .4s;
+        }
+        input:checked+.page .page_content{
+            width: 100%;
+            display: block;
+        }
+        .page h1{
+            font-size: 70px;
+        }
+        .page p{
+
+        }
+        .page span{
+            font-size: 26px;
+            letter-spacing: 2px;
+            color: rgb(56, 56, 56);
+        }
+        label:hover{
+            cursor: pointer;
+            color: #fff;
+           background-color: #14BAE4;
+        }
+    </style>
+        <style>
+            table{
+                width: 100%;
+               
+                border-collapse: collapse;
+                
+                
+            }
+            tr{
+                display: table-row;
+                height: 40px;
+            }
+            
+            td{
+                width:16.6%;
+                box-sizing: border-box;
+                color: #202124;
+                /* border: 1px solid #000; */
+                display: table-cell;
+                vertical-align: top;
+                table-layout: fixed;
+                font-size: 14px;
+            }
+            td:nth-child(odd) {
+                font-weight: bold;
+                padding-left: 57px;
+            }
+            table tr td img{
+                vertical-align: bottom;
+                height: 100%;
+                width: auto;
+            } 
+            .table-title{
+                bac
+            }
+        </style>
+</head>
+<body>
+  <div class="container ebay-container">  
+    <div class="slide slide1">
+        <section class="banner">
+           <img src="https://12915344.s21i.faiusr.com/2/ABUIABACGAAgroiT-gUo9-WUmgEwgQ04-gI.jpg" alt="フレキシブルソーラーパネル" class="img-fluid">
+        </section>
+        <nav class="menu">
+        <div class="container">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a
+                        href="https://www.ebay.com/str/renogyus?_trksid=p2047675.l2563"
+                        target="_blank" class="disabled-link ourStore">  <span><i class="iconfont icon-Ourstore"></i>Our Store</span>  </a>
+                </li>
+                <li class="menu__item"><a href="https://www.ebay.com/fdbk/feedback_profile/renogy-us" target="_blank"
+                        class="disabled-link feedback"> <span> <i class="iconfont icon-feedback"></i> Feedback</span>  </a>
+                </li>
+      
+                <li class="menu__item"><a href="https://www.renogy.com/shipping-returns/"
+                        target="_blank" class="disabled-link"> <span> <i class="iconfont icon-Shipping"></i> Shipping&amp;Returns</span>  </a>
+                </li>
+                <li class="menu__item"><a
+                        href="https://www.ebay.com/cnt/intermediatedFAQ?requested=renogysolar&_trksid=p2050430.m2531.l4583&rt=nc"
+                        target="_blank" class="disabled-link"> <span> <i class="iconfont icon-kefu"></i> Contact Us</span> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    <div class="slide slide2 video">
+        video
+    </div>
+    <div class="slide slide3">
+        <h1>
+            - Renogy BT-1 Bluetooth Module -
+        </h1>
+        <div class="row">
+        <div class="slide3-container ">
+            <div class="category displaynone">
+                categories
+            </div>
+            <div class="Carousel col col-md-8">
+
+                <div class="carousel-slide Carousel-item2">
+                    <img src="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20203/_03__09246.1628478765.jpg?c=2">
+                </div>
+                <div class="carousel-slide Carousel-item3">
+                    <img src="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20209/_02__60045.1628485823.jpg?c=2">
+                </div>
+                <div class="carousel-slide Carousel-item4">
+                    <img src="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20208/_07__76364.1628478844.jpg?c=2">
+                </div>
+                <div class="carousel-slide Carousel-item5">
+                    <img src="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20209/_02__60045.1628485823.jpg?c=2">
+                </div>
+                <div class="carousel-slide Carousel-item6">
+                    <img src="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20203/_03__09246.1628478765.jpg?c=2">
+                </div>
+                <div class="carousel-slide Carousel-item7">
+
+                </div>
+                <div class="bigimg Carousel-item1">
+                    <div class="bigimg-item">
+                        <div class="bigimg-slide">
+                            
+                            <div
+                                style="background-image: url(&quot;https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20203/_03__09246.1628478765.jpg?c=2&quot;);">
+                    
+                            </div>
+                            <div
+                                style="background-image: url(&quot;https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20209/_02__60045.1628485823.jpg?c=2&quot;);">
+                            </div>
+                            <div
+                                style="background-image: url(&quot;https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20208/_07__76364.1628478844.jpg?c=2&quot;);">
+                            </div>
+
+                        </div>                        
+                    </div>
+
+                </div>        
+            </div>
+
+            <div class="word-description col col-md-4">
+                <div class="col col-md-12 order-1">
+                <h2>
+                <font color="#1ac0e5">Description</font>
+                </h2>
+                <p>
+                    The Renogy BT-1 Bluetooth Module (New Version) pairs great with any compatible Renogy solar charge controller. This updated model boasts an increased signal range of up to 82 feet and an additional LED to indicate when your devices have synced. Plug the BT-1 into your controller's RJ12 port to seamlessly monitor and change settings straight from your smart device through the DC Home App (available in both the App Store and Google Play).
+                </p>
+                </div>
+                <div class="col col-md-12 order-2">
+                    <h2 style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14pt;">
+                    <font color="#1ac0e5">Specification</font>
+                    </h2>
+                    <ul class="bulletpoints__list">
+                        <li class="bulletpoints__item"><i aria-hidden="true"
+                                class="iconfont icon-check"></i>&nbsp; Output
+                            Waveform: Pure Sine Wave<br></li>
+                        <li class="bulletpoints__item"><i aria-hidden="true"
+                                class="iconfont icon-check"></i>&nbsp; Continuous
+                            Output Power: 3500W<br></li>
+                        <li class="bulletpoints__item"><i aria-hidden="true"
+                                class="iconfont icon-check"></i>&nbsp; Peak Power
+                            Rating: 7000W<br></li>
+                        <li class="bulletpoints__item"><i aria-hidden="true"
+                                class="iconfont icon-check"></i>&nbsp; Efficiency:
+                            &gt; 90%</li>
+                        <li class="bulletpoints__item"><i aria-hidden="true"
+                                class="iconfont icon-check"></i>&nbsp; Output
+                            Voltage: 120VAC<br></li>
+                        <li class="bulletpoints__item"><i aria-hidden="true"
+                                class="iconfont icon-check"></i>&nbsp; Weight: 23.8
+                            lbs</li>
+                        <li class="bulletpoints__item"><i aria-hidden="true"
+                                class="iconfont icon-check"></i>&nbsp; Dimensions:
+                            16.8*12.7*4.9 in<br></li>
+                    </ul>
+                </div>
+                <div class="col col-md-12 order-3">
+                    <ul>
+                        <li>
+                            <i class="iconfont icon-Shipping"></i><strong style="padding-left: 2pt;">1-year material warranty</strong>
+                        </li>
+                        <li>
+                            <i class="iconfont icon-Shipping"></i><strong style="padding-left: 2pt;">1-year material and workmanship warranty</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+    </div> 
+        </div>
+      
+    </div>
+
+    <div class="slide slide4">文字图片文字图片。。。。</div>
+    <div class="slide slide5">
+        <h1 class="title">Specification</h1>
+        <div class="shell">
+            <label for="button1" class="button" style="--i:0"> <i class="iconfont icon-feedback"></i> Manual</label>
+            <input type="radio" id="button1" name="page" checked>
+            <div class="page">
+                <div class="page_content">
+                   
+                    <p class="table-title"> 
+                        Renogy 10ft 10AWG Adaptor Kit - Connecting Solar Panels to Charge Controllers
+                    </p>
+                    <span>
+                        Designers are reimagining soignée staples for spring and summer─skirt suits, twin sets,
+                        below-the-knee dresses, kitten heels and frame bags─that appear anything but moth-eaten. in fact,
+                        fashion's neoconservative coup d'état feels deliciously defiant, given the excessively revealing
+                        styles pop culture celebrates. a quick flip through any supermarket tabloid yields an onslaught of
+                        oversexed stars and their indelicate fashion choices.
+                    </span>
+                </div>
+            </div>
+    
+            <label for="button2" class="button" style="--i:1"><i class="iconfont icon-feedback"></i>Specification</label>
+            <input type="radio" id="button2" name="page">
+            <div class="page">
+                <div class="page_content">
+               
+                    <p class="table-title">Renogy 10ft 10AWG Adaptor Kit - Connecting Solar Panels to Charge Controllers</p>
+                   <table  border="1"   cellspacing="0" cellpadding="0"  >
+                    <tr>
+                        <td>New:</td>
+                        <td>
+                            A brand-new, unused, unopened, undamaged item in its original packaging (where packaging is ... Read moreabout the condition	
+
+                          </td>
+                          <td>NEW:</td>
+                          <td>
+                              A brand-new, unused, unopened, undamaged item in its original packaging (where packaging is ... Read moreabout the condition	
+  
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>Size</td>
+                        <td>43,000</td>
+                        <td>77,000</td>
+                        <td>89,000</td>
+          
+                    </tr>
+                    <tr>
+                        <td>公称電圧</td>
+                        <td>12.8V</td>
+                        <td>12.8V</td>
+                        <td>12.8V</td>
+                  
+                    </tr>
+                    <tr>
+                        <td>公称容量</td>
+                        <td>50Ah</td>
+                        <td>100Ah</td>
+                        <td>100Ah</td>
+                   
+                    </tr>
+                   </table>
+                </div>
+            </div>
+    
+    
+            <label for="button3" class="button" style="--i:2"> <i class="iconfont icon-feedback"></i>Warranty</label>
+            <input type="radio" id="button3" name="page">
+            <div class="page">
+                <div class="page_content">
+              
+                    <p class="table-title">Renogy 10ft 10AWG Adaptor Kit - Connecting Solar Panels to Charge Controllers</p>
+                    <span>
+                        Designers appreciate it when attendees wear their brand to their show. most design houses will even
+                        ensure that the celebrities are “appropriately” dressed in designer wear once they agree to attend.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide slide6"></div>
+    <div class="slide slide7">
+        <div role="img" class="ebay-star-rating" aria-label="5.0 out of 5 stars">
+            <span class="star-rating">
+                <i class="fullStar"></i>
+                <i class="fullStar"></i>
+                <i class="fullStar"></i>
+                <i class="fullStar"></i>
+                <i class="fullStar"></i>
+                <i class="midStar"></i>
+                <i class="emptyStar"></i>
+            </span>
+        </div>
+    </div>
+   
+
+    </div>
+</body>
+<style>
+    .ebay-star-rating {
+    margin-bottom: 5px;
+}
+.star-rating i{
+    background-image: url(https://ir.ebaystatic.com/f/ndzx0lxole32fflkcjkfbyzulah.png);
+    background-size: 185px 138px;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    text-align: left;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.star-rating i.fullStar, .rs i.fullStar{
+
+    background-position: -20px -122px;
+}
+.star-rating i.midStar{
+    background-position: -55px -122px;
+}
+.star-rating i.emptyStar{
+    background-position: -40px -122px;
+}
+</style>
+</html>
