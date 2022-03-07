@@ -12,6 +12,10 @@
         
     </style>
     <style>
+        p{
+            margin: 0;
+            padding: 0;
+        }
         .iconfont{
             vertical-align: middle;
         }
@@ -49,6 +53,7 @@
             margin-left: auto;
             padding-left: 15px;
             padding-right: 15px;
+            padding-bottom: 84px;
         }
         ul{
             list-style: none;
@@ -124,9 +129,7 @@
        
 /* ========================slide1 */
         .slide2 {
-            height: 200px;
-            background-color: violet;
-            padding: 20px;
+
         }
         .slide3 {
             padding-top: 80px;
@@ -157,6 +160,7 @@
         .slide3 h1{
             text-align: center;
             padding-bottom: 60px;
+            margin: 0;
         }
         .slide3 .category{  
             padding-right: 100px;
@@ -280,6 +284,25 @@
         }
         .Carousel-item7{ grid-area: 1 / 3 / 2 / 4; }
     </style> -->
+    <!-- slide4 -->
+    <style>
+        .slide4{
+            margin-top: 60px;
+        }
+        .slide4-container{
+            
+        }
+        .slide4-container .about-product{
+            display: flex;
+        }
+        .about-product > div{
+            width: 50%;
+        }
+        .about-product img{
+            width: 100%;
+            height: auto;
+        }
+    </style>
     <!-- 切换 -->
     <style>
         .shell{
@@ -408,8 +431,8 @@
             }
             table tr td img{
                 vertical-align: bottom;
-                height: 100%;
-                width: auto;
+                height:auto ;
+                width: 100%;
             } 
             .table-title{
                 /* bac */
@@ -428,7 +451,7 @@
             border-radius:10px;
             border: 1px solid #f4f4f4;
             margin: 0 12px;
-            box-shadow:1px  2px 4px 2px #f0f0f0;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
         }
         .slide6-container .recommend dt{
             padding: 33px;
@@ -451,6 +474,78 @@
             font-weight: normal;
             font-size: 12px;
         }
+        .slide7-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .product-Ratings{  
+            width: 48%;
+            background: #FFFFFF;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+            opacity: 1;
+            border-radius: 10px;
+            padding: 27px 0 27px 61px;
+        }
+        .product-Ratings h2{
+            font-size: 16px;
+            font-family: Roboto;
+            font-weight: bold;
+            color: #202124;
+            margin: 0;
+ 
+        }
+        .product-Ratings h3{
+            font-size: 14px;
+            line-height: 17px;
+            font-family: Roboto;
+            font-weight: 400;
+            color: #A6ADB4;
+            margin: 0;
+            margin-bottom: 30px;
+
+        }
+        .product-Ratings .feedback-item .head{
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin-right: -100px;
+        }
+        .product-Ratings .feedback-item .review-wrap{
+            margin-left: 60px;
+        }
+        .product-Ratings .feedback-item .review-wrap p{
+            color: #A6ADB4;
+            font-size: 12px;
+        }
+        .product-Ratings .feedback-item .review-wrap .review-title { 
+            font-size: 14px;
+            font-family: Roboto;
+            font-weight: bold;
+            color: #202124;
+        }
+        .rating-item{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        .rating-item > div{
+       
+            font-size: 14px;
+            font-family: Roboto;
+            font-weight: bold;
+            color: #202124;
+        }
+        .rating-item-date{
+
+            font-size: 14px;
+            font-family: Roboto;
+            font-weight: bold;
+
+            color: #14BAE4;
+          
+        }
     </style>
 </head>
 <body>
@@ -460,7 +555,7 @@
            <img src="https://12915344.s21i.faiusr.com/2/ABUIABACGAAgroiT-gUo9-WUmgEwgQ04-gI.jpg" alt="フレキシブルソーラーパネル" class="img-fluid">
         </section>
         <nav class="menu">
-        <div class="container">
+        <div class="">
             <ul class="menu__list">
                 <li class="menu__item">
                     <a
@@ -483,7 +578,15 @@
     </nav>
     </div>
     <div class="slide slide2 video">
-        video
+        <div class="video-container">
+            <div class="video-context ">
+                <video controls poster="https://store-4zqahxlkkh.mybigcommerce.com/content/home/video/video-cover.jpg"
+                    preload="metadata" muted="true" id="video" class="video-cover"
+                    src="https://store-4zqahxlkkh.mybigcommerce.com/content/home/video/newrealse.mp4"  width="100%">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
     </div>
     <div class="slide slide3">
         <h1>
@@ -589,7 +692,82 @@
       
     </div>
 
-    <div class="slide slide4">文字图片文字图片。。。。</div>
+    <div class="slide slide4">
+        <div class="slide4-container">
+            <div class="about-product">
+                <div>
+                    <img src="https://img.auctiva.com/imgdata/2/0/5/8/9/5/6/webimg/1088757402_o.jpg" alt="">
+                </div>
+                <div>
+                    <h1>Item specifics</h1>
+                    <p>Condition</p>
+                    <table  class="about-product-table"   cellspacing="0" cellpadding="0"  >
+                        <tr>
+                            <td>New:</td>
+                            <td>
+                                A brand-new, unused, unopened, undamaged item in its original packaging (where packaging is ... Read moreabout the condition	
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td>2.65×1.38 ×0.55 in (67.3x35x14mm)</td>
+                        </tr>
+                        <tr>
+                            <td>connector Type:</td>
+                            <td>RJ12</td>
+                        
+                        </tr>
+                        <tr>
+                            <td>custom Bundle:</td>
+                            <td>NO</td>
+                        
+                    
+                        </tr>
+                        <tr>
+                            <td>Maximum Input Voltage:</td>
+                            <td>5V</td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Cable Length:</td>
+                            <td>5.00 m (16.4 ft)</td>
+
+                        </tr>
+                        <tr>
+                            <td>lnstallation Dimensions:</td>
+                            <td>67.3 p3.5mm (2.66 p 0.14in)</td>
+
+                    
+                        </tr>
+                        <tr>
+                            <td>operation Temperature:</td>
+                            <td>-20°C~85°C (-4*F to 185°F)</td>
+
+                    
+                        </tr>
+                        <tr>
+                            <td>communication Protocol:</td>
+                            <td>RS232</td>
+
+                    
+                        </tr>
+                        <tr>
+                            <td>Input Voltage:</td>
+                            <td>5V</td>
+
+                    
+                        </tr>
+                        <tr>
+                            <td>standby Power Consumption:</td>
+                            <td>0.04w</td>
+            
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="slide slide5">
         <h1 class="title">Specification</h1>
         <div class="shell">
@@ -1094,17 +1272,98 @@
     <div class="slide slide7">
         <h1 class="title">Product Ratings
         </h1>
-        <div class="slide7-container"></div>
-        <div role="img" class="ebay-star-rating" aria-label="5.0 out of 5 stars">
-            <span class="star-rating">
-                <i class="fullStar"></i>
-                <i class="fullStar"></i>
-                <i class="fullStar"></i>
-                <i class="fullStar"></i>
-                <i class="fullStar"></i>
-                <i class="midStar"></i>
-                <i class="emptyStar"></i>
-            </span>
+        <div class="slide7-container">
+            <div class="product-Ratings" >
+                <h2>Detailed seller ratings</h2>
+                <h3>Average for the last 12 months</h3>
+                <div class="rating-item">
+                    <div>
+                        <p>Accurage description</p>
+                        <div role="img" class="ebay-star-rating" aria-label="5.0 out of 5 stars">
+                            <span class="star-rating">
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <!-- <i class="midStar"></i>
+                                <i class="emptyStar"></i> -->
+                            </span>
+                            <span class="rating-item-date">(2060)</span>
+                        </div>
+                    </div>
+                    <div >
+                        <p>Reasonable shipping cost</p>
+                        <div role="img" class="ebay-star-rating" aria-label="5.0 out of 5 stars">
+                            <span class="star-rating">
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <!-- <i class="midStar"></i>
+                                <i class="emptyStar"></i> -->
+                            </span>
+                            <span class="rating-item-date">(2207)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Shipping speed</p>
+                        <div role="img" class="ebay-star-rating" aria-label="5.0 out of 5 stars">
+                            <span class="star-rating">
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <!-- <i class="midStar"></i>
+                                <i class="emptyStar"></i> -->
+                            </span>
+                            <span class="rating-item-date">(2092)</span>
+                        </div>
+                    </div>
+                    <div >
+                        <p>Communication</p>
+                        <div role="img" class="ebay-star-rating" aria-label="5.0 out of 5 stars">
+                            <span class="star-rating">
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <i class="fullStar"></i>
+                                <!-- <i class="midStar"></i>
+                                <i class="emptyStar"></i> -->
+                            </span>
+                            <span class="rating-item-date">(2191)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-Ratings">
+                <h2 style="margin-bottom: 30px;">Feedback</h2>
+                <div class="feedback-item">
+                    <div class="head">
+                        <a href="https://www.ebay.com/fdbk/feedback_profile/renogy_solar?filter=feedback_page%3ARECEIVED_AS_SELLER&_trksid=p2047675.m3561.l2560"><img src="https://p1.music.126.net/8imWg1RM_TKLy10IeIDsDA==/109951163243354161.jpg?param=50y50"></a>
+                    </div>
+                    <div class="review-wrap">
+                        <p class="review-title">Good buying experience with the seller</p>
+                        <p>Renogy 5 paris connectors cable for solar panels pair male/female connector
+                            (#<span style="color: #14BAE4;">283910073936</span> )</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="feedback-item">
+                    <div class="head">
+                        <a href="https://www.ebay.com/fdbk/feedback_profile/renogy_solar?filter=feedback_page%3ARECEIVED_AS_SELLER&_trksid=p2047675.m3561.l2560"><img src="https://p1.music.126.net/8imWg1RM_TKLy10IeIDsDA==/109951163243354161.jpg?param=50y50"></a>
+                    </div>
+                  
+                    <div class="review-wrap">
+                        <p class="review-title">Quick</p>
+                        <p>Renogy 5 paris connectors cable for solar panels pair male/female connector
+                            (#<span style="color: #14BAE4;">283910073936</span> )</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
    
@@ -1135,6 +1394,9 @@
 }
 .star-rating i.emptyStar{
     background-position: -40px -122px;
+}
+.star-rating{
+    vertical-align: middle;
 }
 </style>
 </html>
