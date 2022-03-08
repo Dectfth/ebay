@@ -5,11 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_3222625_a81eofdcy1.css">
+    <!-- <link rel="stylesheet" href="https://at.alicdn.com/t/font_3222625_a81eofdcy1.css"> -->
+    <script src="https://at.alicdn.com/t/font_3228879_mls9rasomzd.js"></script>
     <style>
         @import url('https://img.eselt.de/assets/templates/vendor/bootstrap.v3.3.5.min.css');
         @import url('https://img.eselt.de/fonts/vendor/font-awesome-5.1.0/css/all.css');
         
+    </style>
+    <style type="text/css">
+        .icon {
+            width: 2em;
+            height: 2em;
+            vertical-align: middle;
+           fill: currentColor;
+           overflow: hidden;
+        }
     </style>
     <style>
         p,h1,h2,h3{
@@ -61,9 +71,10 @@
             padding: 0 ;
             margin: 0;
         }
-        .icon-check{
-            font-size: 16px;
-            font-weight: 800;
+        .icon-check .icon{
+            height: 16px;
+            width: 16px;
+   
         }
         .slide1 .menu {
             font-family: 'Roboto';
@@ -99,10 +110,18 @@
            
         }
         .slide1 .menu .menu__list .menu__item a i{
-            padding-right: 10px;
+            padding-right: 2px;
+            vertical-align: text-bottom;
+        }
+        .slide1 .menu .menu__list .menu__item a i .icon{
+            
+            height: 20px;
+            width: 20px;
         }
         .slide1 .menu .menu__list .menu__item a span{
-            
+            font-size: 16px;
+            font-family: Roboto;
+            font-weight: bold;
             position: relative;
             padding-bottom: 5px;
         }
@@ -114,8 +133,10 @@
             content: '';
             position: absolute;
             height:3px ;
-            width: 90%;
-            left: 5%;
+            /* width: 90%;
+            left: 5%; */
+            width: 80%;
+            left: 10%;
             bottom: -3px;
             opacity: 0;     
             background: #14BAE4;
@@ -137,15 +158,22 @@
         }
         .slide3 .order-1 h2,.slide3 .order-2 h2{
             margin: 0;
+            font-size: 30px;
+            font-family: Roboto;
+            font-weight: bold;
+            color: #14BAE4;
             
         }
         .slide3 .order-1 p,.slide3 .order-2 ul{
             font-size: 14px;
             margin: 0;
+            font-weight: bold;
+            font-family: Roboto;
+            line-height: 22px;
             padding: 16px 0 8px 0;
         } 
         .slide3 .order-3{
-            padding-top: 40pt;
+            padding-top: 48px;
         }
         .slide3 .order-3 ul li {
             color: #14BAE4;
@@ -162,12 +190,21 @@
             text-align: center;
             padding-bottom: 60px;
             margin: 0;
+            font-size: 36px;
+            font-family: Roboto;
+            font-weight: bold;
+
         }
         .slide3 .category{  
             padding-right: 100px;
         }
         .slide3 .word-description{
-            /* padding-left: 51px; */
+            margin-left: 36px;
+        }
+        .word-description,.word-description >div {
+            padding-right: 0;
+            padding-left: 0;
+        
         }
         .displaynone{
             display: none;
@@ -182,27 +219,37 @@
             height: auto;
         }
         .Carousel {
+            height: 600px;
+            max-width: 740px;
             display: grid;
             grid-template-columns: 5fr 1fr;
             grid-template-rows: repeat(5, 1fr);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
         }
-
+/* 
         .Carousel-item1 { grid-area: 1 / 1 / 6 / 2; }
         .Carousel-item2 { grid-area: 1 / 2 / 2 / 3; }
         .Carousel-item3 { grid-area: 2 / 2 / 3 / 3; }
         .Carousel-item4 { grid-area: 3 / 2 / 4 / 3; }
         .Carousel-item5 { grid-area: 4 / 2 / 5 / 3; }
-        .Carousel-item6{ grid-area: 5 / 2 / 6 / 3; }
+        .Carousel-item6{ grid-area: 5 / 2 / 6 / 3; } */
         .carousel-slide{
             cursor: pointer;
             border: 5px solid transparent;
             border-radius: 10%;
-         
+            width: 100px;
+            height: 100px;
             overflow: hidden;
         }
+        /* @media (min-width: 992px){
+        .col-md-8 {
+            width: 62%;
+        }
+    } */
         .bigimg{
+            width: 610px;
+            height: 610px;
             border: 5px solid transparent;
             border-radius: 12px;
          
@@ -268,6 +315,14 @@
             -webkit-transform: translateX(-400%);
             -ms-transform: translateX(-400%);
         }
+        .Carousel-item7:active~.bigimg>.bigimg-item>.bigimg-slide {
+            -webkit-transition: all 0s;
+            -ms-transition: all 0s;
+            transition: all 0s;
+            transform: translateX(-500%);
+            -webkit-transform: translateX(-500%);
+            -ms-transform: translateX(-500%);
+        }
         .Carousel-item6:active~.big>.mid{
             background-color: aqua;
             transform: translateX(50%);
@@ -276,31 +331,53 @@
             overflow: hidden;
         }
     </style>
-    <!-- <style>
-        /* 第七个 */
+    <style>
+        /* 第6个 */
         .Carousel{
-            grid-template-columns: 5fr repeat(2, 1fr) repeat(2, 0);
-            grid-template-rows: repeat(5, 1fr);
-      
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
         }
-        .Carousel-item7{ grid-area: 1 / 3 / 2 / 4; }
-    </style> -->
+
+        .Carousel-item1 { grid-area: 1 / 1 / 7 / 2; }
+        .Carousel-item2 { grid-area: 1 / 2 / 2 / 3; }
+        .Carousel-item3 { grid-area: 2 / 2 / 3 / 3; }
+        .Carousel-item4 { grid-area: 3 / 2 / 4 / 3; }
+        .Carousel-item5 { grid-area: 4 / 2 / 5 / 3; }
+        .Carousel-item6 { grid-area: 5 / 2 / 6 / 3; }
+        .Carousel-item7 { grid-area: 6 / 2 / 7 / 3; }
+    </style>
     <!-- slide4 -->
     <style>
         .slide4{
             margin-top: 60px;
         }
         .slide4-container .about-product-table{
-            
+            margin-top: 18px;
         }
         .slide4-container .about-product-table td:nth-child(odd){
             text-align: right;
             padding-right: 19px;
             padding-left: 0;
         }
+
         
         .slide4-container .about-product-table tr{
             height: 22px;
+        }
+        .slide4-container .about-product-table tr .about-product-table-title span{
+            line-height: 30px;
+            padding: 7px 9px;
+            white-space: nowrap;
+            font-size: 14px;
+            color: #fff;
+            font-weight: bold;
+            background-color: #14BAE4;
+         
+            text-align: right;
+            margin-top: 21px;
         }
         .slide4-container .about-product{
             display: flex;
@@ -316,7 +393,7 @@
 
         }
         .slide4-container .about-product .about-product-item h1{
-          
+
             text-align: center;
          }
          .slide4-container .about-product .about-product-item p{
@@ -482,7 +559,7 @@
         }
         .slide6-container{
             display: flex;
-            padding: 0 22px;
+            padding: 23px 22px 50px;
         }
         .slide6-container .recommend{
             width: 25%;
@@ -502,6 +579,7 @@
         }
         .slide6-container .recommend dd> span{
             color: #14BAE4;
+            font-weight: normal;
             
         }
         .slide6-container .recommend dd p{
@@ -585,6 +663,33 @@
           
         }
     </style>
+    <style>
+
+.icon-wrap{
+    position: relative;
+    border: 2px solid #14BAE4;
+    border-right: 3px solid #14BAE4;
+    border-left: 3px solid #14BAE4;
+    border-radius: 2px;
+    border-bottom-left-radius: 0;
+    background: #14BAE4;
+    
+    color: #fff;
+    font-size: 12px;
+
+}
+.icon-wrap::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent #14BAE4;
+    border-width: 0 0 5px 5px;
+    border-style: solid;
+    top: 15px;
+    left: -3px;
+}
+    </style>
 </head>
 <body>
   <div class="container ebay-container">  
@@ -598,18 +703,34 @@
                 <li class="menu__item">
                     <a
                         href="https://www.ebay.com/str/renogyus?_trksid=p2047675.l2563"
-                        target="_blank" class="disabled-link ourStore">  <span><i class="iconfont icon-Ourstore"></i>Our Store</span>  </a>
+                        target="_blank" class="disabled-link ourStore">  <span>
+                            <i><svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-Ourstore"></use>
+                            </svg></i>
+                           Our Store
+                        </span>  </a>
                 </li>
                 <li class="menu__item"><a href="https://www.ebay.com/fdbk/feedback_profile/renogy-us" target="_blank"
-                        class="disabled-link feedback"> <span> <i class="iconfont icon-feedback"></i> Feedback</span>  </a>
+                        class="disabled-link feedback"> <span>
+                            <i><svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-feedback"></use>
+                            </svg></i>
+                          Feedback </span>  </a>
                 </li>
       
                 <li class="menu__item"><a href="https://www.renogy.com/shipping-returns/"
-                        target="_blank" class="disabled-link"> <span> <i class="iconfont icon-Shipping"></i> Shipping&amp;Returns</span>  </a>
+                        target="_blank" class="disabled-link"> <span>
+                             <i><svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-Shipping"></use>
+                            </svg></i>
+                             Shipping&amp;Returns</span>  </a>
                 </li>
                 <li class="menu__item"><a
                         href="https://www.ebay.com/cnt/intermediatedFAQ?requested=renogysolar&_trksid=p2050430.m2531.l4583&rt=nc"
-                        target="_blank" class="disabled-link"> <span> <i class="iconfont icon-Contact-Us"></i> Contact Us</span> </a>
+                        target="_blank" class="disabled-link"> <span>
+                             <i><svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-Contact-Us"></use>
+                            </svg></i> Contact Us</span> </a>
                 </li>
             </ul>
         </div>
@@ -636,7 +757,7 @@
                 categories
             </div>
             <div class="Carousel col col-md-8">
-
+                <!-- 小图展示 -->
                 <div class="carousel-slide Carousel-item2">
                     <img src="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20203/_03__09246.1628478765.jpg?c=2">
                 </div>
@@ -653,12 +774,13 @@
                     <img src="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20203/_03__09246.1628478765.jpg?c=2">
                 </div>
                 <div class="carousel-slide Carousel-item7">
+                    <img src="https://img.auctiva.com/imgdata/2/0/5/8/9/5/6/webimg/1088757402_o.jpg">
 
                 </div>
                 <div class="bigimg Carousel-item1">
                     <div class="bigimg-item">
                         <div class="bigimg-slide">
-                            
+                            <!-- 大图展示 -->
                             <div
                                 style="background-image: url(&quot;https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20203/_03__09246.1628478765.jpg?c=2&quot;);">
                     
@@ -669,6 +791,17 @@
                             <div
                                 style="background-image: url(&quot;https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20208/_07__76364.1628478844.jpg?c=2&quot;);">
                             </div>
+                            <div
+                                style="background-image: url(&quot;https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20209/_02__60045.1628485823.jpg?c=2&quot;);">
+                            </div>
+                            <div
+                            style="background-image: url(https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1730/20203/_03__09246.1628478765.jpg?c=2);">
+                
+                        </div>
+                            <div
+                            style="background-image: url(https://img.auctiva.com/imgdata/2/0/5/8/9/5/6/webimg/1088757402_o.jpg?c=2);">
+                
+                        </div>
 
                         </div>                        
                     </div>
@@ -686,40 +819,74 @@
                 </p>
                 </div>
                 <div class="col col-md-12 order-2">
-                    <h2 style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14pt;">
+                    <h2>
                     <font color="#1ac0e5">Specification</font>
                     </h2>
                     <ul class="bulletpoints__list">
-                        <li class="bulletpoints__item"><i aria-hidden="true"
-                                class="iconfont icon-check"></i>&nbsp; Output
+                        <li class="bulletpoints__item"><i 
+                                class=" icon-check">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-check"></use>
+                                </svg>
+                            </i>&nbsp; Output
                             Waveform: Pure Sine Wave<br></li>
-                        <li class="bulletpoints__item"><i aria-hidden="true"
-                                class="iconfont icon-check"></i>&nbsp; Continuous
+                        <li class="bulletpoints__item"><i
+                                class=" icon-check">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-check"></use>
+                                </svg>
+                            </i>&nbsp; Continuous
                             Output Power: 3500W<br></li>
-                        <li class="bulletpoints__item"><i aria-hidden="true"
-                                class="iconfont icon-check"></i>&nbsp; Peak Power
+                        <li class="bulletpoints__item"><i
+                                class=" icon-check">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-check"></use>
+                                </svg>
+                            </i>&nbsp; Peak Power
                             Rating: 7000W<br></li>
-                        <li class="bulletpoints__item"><i aria-hidden="true"
-                                class="iconfont icon-check"></i>&nbsp; Efficiency:
+                        <li class="bulletpoints__item"><i
+                                class=" icon-check">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-check"></use>
+                                </svg>
+                            </i>&nbsp; Efficiency:
                             &gt; 90%</li>
-                        <li class="bulletpoints__item"><i aria-hidden="true"
-                                class="iconfont icon-check"></i>&nbsp; Output
+                        <li class="bulletpoints__item"><i
+                                class=" icon-check">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-check"></use>
+                                </svg>
+                            </i>&nbsp; Output
                             Voltage: 120VAC<br></li>
-                        <li class="bulletpoints__item"><i aria-hidden="true"
-                                class="iconfont icon-check"></i>&nbsp; Weight: 23.8
+                        <li class="bulletpoints__item"><i
+                                class=" icon-check">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-check"></use>
+                                </svg>
+                            </i>&nbsp; Weight: 23.8
                             lbs</li>
-                        <li class="bulletpoints__item"><i aria-hidden="true"
-                                class="iconfont icon-check"></i>&nbsp; Dimensions:
+                        <li class="bulletpoints__item"><i
+                                class=" icon-check">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-check"></use>
+                                </svg>
+                            </i>&nbsp; Dimensions:
                             16.8*12.7*4.9 in<br></li>
                     </ul>
                 </div>
                 <div class="col col-md-12 order-3">
                     <ul>
                         <li>
-                            <i class="iconfont icon-Warranty"></i><strong style="padding-left: 2pt;">1-year material warranty</strong>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-Warranty"></use>
+                            </svg>
+                            <strong style="padding-left: 2px;font-size: 16px;"><span>1-year material warranty</span> </strong>
                         </li>
                         <li>
-                            <i class="iconfont icon-Warranty"></i><strong style="padding-left: 2pt;">1-year material and workmanship warranty</strong>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-Warranty"></use>
+                            </svg>
+                            <strong style="padding-left: 2px;font-size: 16px;"><span>1-year material and workmanship warranty</span> </strong>
                         </li>
                     </ul>
                 </div>
@@ -739,9 +906,15 @@
                 </div>                
                 <div class="about-product-item">
                     <h1>Item specifics</h1>
-                    <p>Condition</p>
+      
 
                     <table class="about-product-table" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="about-product-table-title" >
+                                <span>Condition</span>
+                                </td>
+                            <td></td>
+                        </tr>
                         <tr>
                             <td>New:</td>
                             <td>
@@ -899,9 +1072,17 @@
                 </div>                
                 <div class="about-product-item">
                     <h1>About this product</h1>
-                    <p>Product Identifiers</p>
+                 
 
                     <table class="about-product-table" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="about-product-table-title">
+                                <span>
+                                    Product Identifiers
+                                </span>
+                            </td>
+                            <td></td>
+                        </tr>
                         <tr>
                             <td>New:</td>
                             <td>
@@ -928,9 +1109,16 @@
                         </tr>
                     </table>
                     <!--  -->
-                    <p>Product Key Features </p>
-
+                  
                     <table class="about-product-table" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="about-product-table-title">
+                                <span>
+                                    Product Key Features
+                                </span>
+                            </td>
+                            <td></td>
+                        </tr>
                         <tr>
                             <td>Size</td>
                             <td>2.65×1.38 ×0.55 in (67.3x35x14mm)</td>
@@ -951,15 +1139,13 @@
                         <tr>
                             <td>custom Bundle:</td>
                             <td>NO</td>
-                            <td>custom Bundle:</td>
-                            <td>NO</td>
+           
                        
                         </tr>
                         <tr>
                             <td>Maximum Input Voltage:</td>
                             <td>5V</td>
-                            <td>Maximum Input Voltage:</td>
-                            <td>5V</td>
+     
                        
                         </tr>
                     </table>
@@ -1425,7 +1611,7 @@
                 <dl>
                     <dt><img src="https://i.ebayimg.com/thumbs/images/g/GUIAAOSwuVFhAkhO/s-l225.jpg" alt=""> </dt>
                     <dd>
-                        Renogy BT-1 Bluetooth Module  BT-1 Bluetooth Module <span> <i class="iconfont icon-Manual"></i> New</span>
+                        Renogy BT-1 Bluetooth Module  BT-1 Bluetooth Module <span> <i class="icon-wrap">N</i> New</span>
                         <p>HKD 1,227.20</p>
                         <p class="saleoff" style="color: #A6ADB4;"> <span style="text-decoration: line-through;">HKD 1230</span>    5%off
                          <br>   +HKD 228.09 shipping</p>
@@ -1436,7 +1622,7 @@
                 <dl>
                     <dt><img src="https://i.ebayimg.com/thumbs/images/g/GUIAAOSwuVFhAkhO/s-l225.jpg" alt=""> </dt>
                     <dd>
-                        Renogy BT-1 Bluetooth Module  BT-1 Bluetooth Module <span> <i class="iconfont icon-Manual"></i> New</span>
+                        Renogy BT-1 Bluetooth Module  BT-1 Bluetooth Module <span> <i class="icon-wrap">N</i> New</span>
                         <p>HKD 1,227.20</p>
                         <p class="saleoff" style="color: #A6ADB4;"> <span style="text-decoration: line-through;">HKD 1230</span>    5%off
                          <br>   +HKD 228.09 shipping</p>
@@ -1447,7 +1633,7 @@
                 <dl>
                     <dt><img src="https://i.ebayimg.com/thumbs/images/g/GUIAAOSwuVFhAkhO/s-l225.jpg" alt=""> </dt>
                     <dd>
-                        Renogy BT-1 Bluetooth Module  BT-1 Bluetooth Module <span> <i class="iconfont icon-Manual"></i> New</span>
+                        Renogy BT-1 Bluetooth Module  BT-1 Bluetooth Module <span> <i class="icon-wrap">N</i> New</span>
                         <p>HKD 1,227.20</p>
                         <p class="saleoff" style="color: #A6ADB4;"> <span style="text-decoration: line-through;">HKD 1230</span>    5%off
                          <br>   +HKD 228.09 shipping</p>
@@ -1458,7 +1644,7 @@
                 <dl>
                     <dt><img src="https://i.ebayimg.com/thumbs/images/g/GUIAAOSwuVFhAkhO/s-l225.jpg" alt=""> </dt>
                     <dd>
-                        Renogy BT-1 Bluetooth Module  BT-1 Bluetooth Module <span> <i class="iconfont icon-Manual"></i> New</span>
+                        Renogy BT-1 Bluetooth Module  BT-1 Bluetooth Module <span> <i class="icon-wrap"> N</i> New</span>
                         <p>HKD 1,227.20</p>
                         <p class="saleoff" style="color: #A6ADB4;"> <span style="text-decoration: line-through;">HKD 1230</span>    5%off
                          <br>   +HKD 228.09 shipping</p>
