@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url('https://at.alicdn.com/t/font_3228879_zjr9xzklkum.css');
+        @import url('https://at.alicdn.com/t/font_3222625_o5ae0jj314h.css');
         @import url('https://img.eselt.de/assets/templates/vendor/bootstrap.v3.3.5.min.css');
         
     </style>
@@ -24,7 +24,10 @@
         ::-webkit-scrollbar {
             width:0px;
         }
-
+        .description{
+                height: 600px;
+        overflow-x: hidden;
+        }
         .description::-webkit-scrollbar{
             width:12px;
       
@@ -435,6 +438,9 @@
         .slide4-container .about-product-table tr{
             height: 22px;
         }
+        .slide4-container .about-product-table tr td{
+            text-align: left;
+        }
         .slide4-container .about-product-table tr .about-product-table-title{
             padding-right: 9px;
         }
@@ -520,7 +526,7 @@
             position: absolute;
             top: 10px;
             margin-top: 30px ;
-            left: calc(57px + (var(--i)*(22% + 57px)));
+            left: calc(57px + (var(--i)*(260px)));
             z-index: 999;
             transition: .3s;
         }
@@ -657,6 +663,7 @@
         }
         .slide6-container .recommend dt{
             padding: 33px;
+            text-align: center;
         }
         .slide6-container .recommend dd {
             margin: 0;
@@ -699,6 +706,7 @@
             opacity: 1;
             border-radius: 10px;
             padding: 27px 0 20px 61px;
+            margin: 0 10px;
         }
         .product-Ratings h2{
             font-size: 16px;
@@ -767,7 +775,6 @@
         }
     </style>
     <style>
-
 .icon-wrap{
     position: relative;
     border: 2px solid #14BAE4;
@@ -823,10 +830,72 @@
 }
 </style>   
 <style>
-    @media (max-width: 768px){
-        .button{
-            left: calc(30px + (var(--i)*(22% + 72px)));
+
+    @media (max-width: 1200px){
+        .col-md-4 {
+            width: 90%;
         }
+        .button{
+            left: calc(30px + (var(--i)*(40% + 20px)));
+        }
+        .button3{
+            top:110px;
+            left: calc(30px + ((var(--i)-0)*(40% + 20px)));
+        }
+        .button4{
+            top:110px;
+            left: calc(30px + ((var(--i)+1)*(40% + 20px)));
+        }
+        .page_content{
+            padding-top: 270px;
+        }
+        .description{
+            height: auto !important;
+        }
+        .about-product{
+            flex-direction: column;
+        }
+        .about-product>div{
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .reverse-product{
+            flex-direction: column-reverse;
+        }
+        .slide6-container{
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+        .slide6-container .recommend{
+            width: 43%;
+        }
+        .slide6-container .recommend dd{
+            padding:0 63px;
+        }
+        .Carousel{
+            height: auto;
+            width: 98%;
+            max-width: 100%;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+            padding-right: 0;
+            padding-left: 6%;
+        }
+        .bigimg{
+            width: 100%;
+            height: auto;
+            
+        }
+        .Carousel-item1 { grid-area: 1 / 1 / 7 / 7; }
+        .Carousel-item2 { grid-area: 7 / 1 / 8 / 2; }
+        .Carousel-item3 { grid-area: 7 / 2 / 8 / 3; }
+        .Carousel-item4 { grid-area: 7 / 3 / 8 / 4; }
+        .Carousel-item5 { grid-area: 7 / 4 / 8 / 5; }
+        .Carousel-item6 { grid-area: 7 / 5 / 8 / 6; }
+        .Carousel-item7 { grid-area: 7 / 6 / 8 / 7;  }
+        
     }
 </style>
 </head>
@@ -976,17 +1045,20 @@
                 </div>        
             </div>
 
-            <div class="word-description col col-md-4">
+            <div class="word-description description col col-md-4">
                 <div class="col col-md-12 order-1">
                 <h2>
                 <font color="#1ac0e5">Description</font>
                 </h2>
-                <p class="description" style="height: 185px;overflow-x: hidden;">
+        
+                                    <p >
                     The Renogy BT-1 Bluetooth Module (New Version) pairs great with any compatible Renogy solar charge controller. This updated model boasts an increased signal range of up to 82 feet and an additional LED to indicate when your devices have synced. Plug the BT-1 into your controller's RJ12 port to seamlessly monitor and change settings straight from your smart device through the DC Home App (available in both the App Store and Google Play).
                     The Renogy BT-1 Bluetooth Module (New Version) pairs great with any compatible Renogy solar charge controller. This updated model boasts an increased signal range of up to 82 feet and an additional LED to indicate when your devices have synced. Plug the BT-1 into your controller's RJ12 port to seamlessly monitor and change settings straight from your smart device through the DC Home App (available in both the App Store and Google Play).
                    
                     
                 </p>
+               
+
                 </div>
                 <div class="col col-md-12 order-2">
                     <h2>
@@ -1141,7 +1213,7 @@
                 </div>
             </div>
             <!--Item specifics 2  -->
-            <div class="about-product">
+            <div class="about-product reverse-product">
                 <div class="about-product-item">
                   
                     <table  class="about-product-table"   cellspacing="0" cellpadding="0"  > 
@@ -1304,7 +1376,7 @@
     <div class="slide slide5">
         <h1 class="title">Specification</h1>
         <div class="shell">
-            <label for="button1" class="button" style="--i:0"> <i class="iconfont icon-a-zu1967"></i> Manual</label>
+            <label for="button1" class="button" style="--i:0"> <i class="iconfont icon-Manual"></i> Manual</label>
             <input type="radio" id="button1" name="page" checked>
             <div class="page">
                 <div class="page_content">
@@ -1312,12 +1384,12 @@
                     <table cellspacing="0" cellpadding="0">
                         <tr>
                             <td style="width: 48%;padding-left: 0;border: 1px solid #fff;text-align: center;">
-                                <a href="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1510/20875/_03__66592.1642477774.jpg?c=2">
+                                <a href="https://www.cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1510/20875/_03__66592.1642477774.jpg?c=2">
                                     <img style="height: 460px;width: auto;" src="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1510/20875/_03__66592.1642477774.jpg?c=2" alt="">
                                 </a>
                             </td>
                             <td style="width: 48%;border: 1px solid #fff;text-align: center;">
-                                <a href="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1510/20875/_03__66592.1642477774.jpg?c=2">
+                                <a href="https://www.renogy.com/">
                                     <img style="height: 460px;width: auto;" src="https://cdn11.bigcommerce.com/s-fhnch/images/stencil/2048x2048/products/1510/20875/_03__66592.1642477774.jpg?c=2" alt="">
                                 </a>
                             </td>
@@ -1592,8 +1664,8 @@
             <label for="button3" class="button button3" style="--i:2"> 
                 <i class="icon" style="padding-right: 19px;">
               <svg xmlns=http://www.w3.org/2000/svg width=42 height=42 viewbox="0 0 45 45"><defs><style>.a1{fill:none}.b1,.c1{fill:#14bae4}.b1{stroke:#14BAE4;stroke-width:1.5px}.d1,.e1{fill:#fff}.e1{opacity:.8}label:hover .b1{stroke:#FFF;fill:#fff}label:hover .c1{fill:#fff}label:hover .d1,label:hover .e1{fill:#14bae4}</style></defs><g transform="translate(-598 -565)"><rect class=a1 width=45 height=45 transform="translate(598 565)"></rect><g transform="translate(601.4 568.161)"><rect class=a1 width=37 height=37 transform="translate(0.6 0.839)"></rect><path class=b1 d=M-28.282,30.318a50.736,50.736,0,0,1-.574-7.648,52.434,52.434,0,0,1,.535-7.364,27.282,27.282,0,0,0-6.085-2.3,28.493,28.493,0,0,0-6.83-.831,27.947,27.947,0,0,0-6.646.81,30.952,30.952,0,0,0-6.261,2.286,54.281,54.281,0,0,1,.491,7.292,56.392,56.392,0,0,1-.528,7.66,5.838,5.838,0,0,0-.055.8c0,2.989,2.273,5.769,4.975,7.864a19.139,19.139,0,0,0,7.6,3.76,3.2,3.2,0,0,0,.433.032,3.166,3.166,0,0,0,.449-.036,19.515,19.515,0,0,0,7.588-3.8c2.7-2.094,4.969-4.844,4.969-7.739a5.448,5.448,0,0,0-.056-.783Zm.19-7.648a50.006,50.006,0,0,0,.568,7.534v0a6.217,6.217,0,0,1,.065.894c0,3.172-2.407,6.124-5.269,8.344A20.333,20.333,0,0,1-40.675,43.4a3.925,3.925,0,0,1-.556.045,4.007,4.007,0,0,1-.535-.041,19.957,19.957,0,0,1-7.962-3.913C-52.592,37.269-55,34.289-55,31.02a6.626,6.626,0,0,1,.061-.9,55.61,55.61,0,0,0,.519-7.558,53.5,53.5,0,0,0-.519-7.459l-.038-.271.246-.123a31.794,31.794,0,0,1,6.669-2.467,28.708,28.708,0,0,1,6.826-.834,29.258,29.258,0,0,1,7.012.855,28.019,28.019,0,0,1,6.5,2.493l.238.128-.039.265a51.837,51.837,0,0,0-.567,7.52Zm0,0 transform="translate(60.287 -8.426)"></path><path class=c1 d=M30.143,99a40.671,40.671,0,0,1,0-12.175,22.751,22.751,0,0,0-10.7-2.65,23.827,23.827,0,0,0-10.7,2.617,44,44,0,0,1,0,12.138c-.764,5.571,8.131,10.344,10.7,10.344,2.542,0,11.485-4.875,10.7-10.273Z transform="translate(-0.387 -77.72)"></path><g transform="translate(12.688 12.09)"><path class=d1 d=M248.148,130.3v-3.028a.4.4,0,0,0-.4-.4h-3.028a.4.4,0,0,0-.395.4V130.3a.4.4,0,0,0,.395.4h3.028a.4.4,0,0,0,.4-.4 transform="translate(-244.33 -122.343)"></path><path class=e1 d=M254.924,126.873H251.9a.393.393,0,0,0-.279.117l3.586,3.586a.394.394,0,0,0,.117-.279v-3.028a.4.4,0,0,0-.4-.4 transform="translate(-246.971 -122.343)"></path><path class=d1 d=M251.435,127.334v3.028a.4.4,0,0,0,.4.395h3.028a.394.394,0,0,0,.279-.115l-3.586-3.587a.394.394,0,0,0-.116.279 transform="translate(-246.905 -122.409)"></path><path class=e1 d=M258.541,127.268V130.3a.4.4,0,0,0,.4.395h3.028a.4.4,0,0,0,.395-.395v-3.028a.4.4,0,0,0-.395-.4h-3.028a.4.4,0,0,0-.4.4 transform="translate(-249.481 -122.343)"></path><path class=d1 d=M248.032,123.535l-3.586-3.586a.4.4,0,0,0-.115.28v3.028a.4.4,0,0,0,.395.4h3.028a.4.4,0,0,0,.279-.117 transform="translate(-244.33 -119.833)"></path><path class=e1 d=M248.214,123.192v-3.028a.4.4,0,0,0-.4-.4H244.79a.4.4,0,0,0-.279.115l3.586,3.586a.389.389,0,0,0,.117-.278 transform="translate(-244.396 -119.768)"></path><rect class=e1 width=3.819 height=3.819 rx=0.62 transform=translate(4.53)></rect><rect class=d1 width=3.819 height=3.819 rx=0.62 transform="translate(4.53 9.06)"></rect><path class=e1 d=M262.425,137.4v-3.028a.4.4,0,0,0-.4-.4H259a.4.4,0,0,0-.279.116l3.586,3.588a.4.4,0,0,0,.116-.279 transform="translate(-249.547 -124.918)"></path><path class=d1 d=M258.656,134.16a.4.4,0,0,0-.115.28v3.028a.4.4,0,0,0,.4.4h3.028a.4.4,0,0,0,.279-.117Z transform="translate(-249.481 -124.984)"></path><path class=e1 d=M258.541,120.209v3.033a.4.4,0,0,0,.4.4h3.049a.309.309,0,0,0,.279-.369v0c0-.013-.006-.026-.009-.039s0-.022-.007-.033l-.013-.053-.008-.028c-.006-.024-.012-.047-.018-.071l0-.009c-.007-.027-.015-.054-.022-.08l-.008-.025c-.005-.018-.011-.036-.017-.054s-.006-.02-.01-.03a.488.488,0,0,0-.016-.048c0-.011-.007-.022-.01-.033s-.011-.03-.016-.045l-.012-.033-.017-.045-.013-.033-.017-.043-.013-.034-.018-.042-.014-.034-.018-.041c0-.011-.01-.022-.015-.034s-.012-.027-.019-.041-.009-.021-.015-.032-.013-.028-.02-.042l-.016-.031c-.007-.015-.015-.029-.021-.043l-.015-.029-.024-.045-.014-.027c-.01-.017-.02-.034-.029-.051s-.008-.013-.011-.019l-.04-.07-.01-.015-.032-.054-.016-.025-.027-.043c-.006-.01-.012-.019-.018-.027s-.017-.027-.026-.04-.013-.019-.02-.029-.017-.025-.026-.038a.329.329,0,0,0-.02-.029l-.026-.037c-.007-.01-.014-.02-.022-.029l-.027-.036c-.008-.009-.014-.019-.022-.028l-.027-.036-.022-.028-.028-.035-.023-.027-.03-.034a.3.3,0,0,0-.023-.027c-.009-.011-.02-.024-.03-.034l-.022-.026-.033-.036-.022-.024-.037-.039-.018-.02c-.018-.019-.037-.038-.056-.057l-.057-.056-.02-.019c-.013-.012-.026-.025-.039-.036s-.015-.015-.023-.023l-.036-.031-.026-.023c-.011-.011-.023-.022-.035-.031s-.018-.016-.027-.022l-.035-.031-.027-.022-.035-.027-.029-.024c-.011-.008-.024-.017-.035-.027l-.029-.022-.036-.027-.029-.021-.038-.026a.25.25,0,0,0-.029-.021l-.037-.026-.029-.02-.04-.026-.028-.018-.043-.028-.025-.015-.054-.032-.016-.011-.069-.04-.02-.011-.051-.029-.028-.014-.044-.024-.03-.015-.042-.022-.032-.015-.041-.021-.032-.015-.042-.019-.033-.015c-.014-.006-.027-.013-.041-.018l-.034-.014-.042-.018-.034-.013-.042-.016-.034-.013-.043-.016-.034-.013-.045-.015-.033-.011-.048-.015-.031-.01c-.017-.006-.036-.012-.054-.017l-.025-.007c-.026-.008-.053-.016-.079-.022l-.008,0-.071-.018-.027-.007-.054-.013-.031-.006-.039-.01h0a.309.309,0,0,0-.369.279.142.142,0,0,0,0,.017 transform="translate(-249.481 -119.818)"></path><path class=d1 d=M248.2,137.406v-3.032a.4.4,0,0,0-.4-.4h-3.049a.309.309,0,0,0-.278.37v0l.009.04c0,.011.005.022.007.032s.008.036.013.054l.007.027.018.071,0,.01.023.079c0,.007,0,.015.008.024s.01.037.017.055.006.02.01.03l.015.048.011.033.015.045.012.034.017.043.013.034c.006.015.011.029.017.043l.013.034c.005.014.011.028.017.041l.014.034.018.041.015.033c.006.014.013.027.018.042s.011.021.016.032.013.028.02.041l.015.032.022.042.016.03c.007.015.015.03.023.045l.015.027c.009.018.019.034.029.052l.01.019c.013.023.027.046.041.069l.009.016c.011.017.022.036.033.053l.015.026c.01.015.018.028.027.043a.281.281,0,0,1,.018.027l.027.039.02.029c.008.013.017.025.026.038s.014.018.02.029l.026.036.022.029.027.036.022.029.027.035.022.027c.01.013.019.023.029.035l.022.028.03.035.022.027.031.034.022.025c.011.013.022.025.033.036l.021.024c.012.013.025.027.038.039l.018.02.056.057.057.056.02.018.038.038a.254.254,0,0,1,.024.021l.036.033.025.022.035.03.027.023.034.03a.31.31,0,0,1,.028.022c.011.008.024.019.035.029l.028.022.036.027.029.022.035.026.029.021.037.027.029.02.038.027.028.019.04.027.027.018.043.027a.174.174,0,0,0,.025.015l.053.033.017.01.069.04.02.011.051.029.027.014.044.024.03.015.042.022.032.015.041.02.032.015.041.018.034.015.041.018.033.015.042.017.034.013.042.018.034.011.043.017.034.012.045.016.033.011.048.015.031.01.054.016.025.007.08.023.01,0,.071.02.028.006.052.013.033.008.039.008h0a.307.307,0,0,0,.369-.277v-.018 transform="translate(-244.381 -124.918)"></path></g></g></g></svg>
-            </i>Warranty
-        </label>
+                </i>Warranty
+            </label>
             <input type="radio" id="button3" name="page">
             <div class="page">
                 <div class="page_content">
@@ -1769,11 +1841,186 @@
                              </table>
                 </div>
             </div>
+            <!-- Q/A -->
+            <label for="button4" class="button button4" style="--i:3"><i class="iconfont icon-fankuifaqs"></i>FAQs</label>
+            <input type="radio" id="button2" name="page">
+            <div class="page">
+                <div class="page_content">
+                       <p class="table-title">Button2 Renogy 10ft 10AWG Adaptor Solar Panels to Charge Controllers</p>
+                       <table   cellspacing="0" cellpadding="0"  >
+                           <tr>
+                               <td>New:</td>
+                               <td>
+                                   A brand-new, unused, unopened, undamaged item in its original packaging (where packaging is ... Read moreabout the condition	
+       
+                                 </td>
+                                 <td>NEW:</td>
+                                 <td>
+                                     A brand-new, unused, unopened, undamaged item in its original packaging (where packaging is ... Read moreabout the condition	
+         
+                                   </td>
+                           </tr>
+                           <tr>
+                               <td>Size</td>
+                               <td>2.65×1.38 ×0.55 in (67.3x35x14mm)</td>
+                               <td>Size</td>
+                               <td>2.65×1.38 ×0.55 in (67.3x35x14mm)</td>
+                 
+                           </tr>
+                           <tr>
+                               <td>connector Type:</td>
+                               <td>RJ12</td>
+                               <td>connector Type:</td>
+                               <td>RJ12</td>
+                         
+                           </tr>
+                           <tr>
+                               <td>custom Bundle:</td>
+                               <td>NO</td>
+                               <td>custom Bundle:</td>
+                               <td>NO</td>
+                          
+                           </tr>
+                           <tr>
+                               <td>Maximum Input Voltage:</td>
+                               <td>5V</td>
+                               <td>Maximum Input Voltage:</td>
+                               <td>5V</td>
+                          
+                           </tr>
+                           <tr>
+                               <td>Cable Length:</td>
+                               <td>5.00 m (16.4 ft)</td>
+                               <td>Cable Length:</td>
+                               <td>5.00 m (16.4 ft)</td>
+                          
+                           </tr>
+                           <tr>
+                               <td>lnstallation Dimensions:</td>
+                               <td>67.3 p3.5mm (2.66 p 0.14in)</td>
+                               <td>lnstallation Dimensions:</td>
+                               <td>67.3 p3.5mm (2.66 p 0.14in)</td>
+                          
+                           </tr>
+                           <tr>
+                               <td>operation Temperature:</td>
+                               <td>-20°C~85°C (-4*F to 185°F)</td>
+                               <td>operation Temperature:</td>
+                               <td>-20°C~85°C (-4*F to 185°F)</td>
+                          
+                           </tr>
+                           <tr>
+                               <td>communication Protocol:</td>
+                               <td>RS232</td>
+                               <td>communication Protocol:</td>
+                               <td>RS232</td>
+                          
+                           </tr>
+                           <tr>
+                               <td>Input Voltage:</td>
+                               <td>5V</td>
+                               <td>Input Voltage:</td>
+                               <td>5V</td>
+                          
+                           </tr>
+                           <tr>
+                               <td>standby Power Consumption:</td>
+                               <td>0.04w</td>
+                               <td>standby Power Consumption:</td>
+                               <td>0.04w</td>             
+                           </tr>
+                          </table>
+                          <p class="table-title">Renogy 10ft 10AWG Adaptor Kit - Connecting Solar Panels to Charge Controllers</p>
+                          <table   cellspacing="0" cellpadding="0"  >
+                              <tr>
+                                  <td>New:</td>
+                                  <td>
+                                      A brand-new, unused, unopened, undamaged item in its original packaging (where packaging is ... Read moreabout the condition	
+          
+                                    </td>
+                                    <td>NEW:</td>
+                                    <td>
+                                        A brand-new, unused, unopened, undamaged item in its original packaging (where packaging is ... Read moreabout the condition	
+            
+                                      </td>
+                              </tr>
+                              <tr>
+                                  <td>Size</td>
+                                  <td>2.65×1.38 ×0.55 in (67.3x35x14mm)</td>
+                                  <td>Size</td>
+                                  <td>2.65×1.38 ×0.55 in (67.3x35x14mm)</td>
+                    
+                              </tr>
+                              <tr>
+                                  <td>connector Type:</td>
+                                  <td>RJ12</td>
+                                  <td>connector Type:</td>
+                                  <td>RJ12</td>
+                            
+                              </tr>
+                              <tr>
+                                  <td>custom Bundle:</td>
+                                  <td>NO</td>
+                                  <td>custom Bundle:</td>
+                                  <td>NO</td>
+                             
+                              </tr>
+                              <tr>
+                                  <td>Maximum Input Voltage:</td>
+                                  <td>5V</td>
+                                  <td>Maximum Input Voltage:</td>
+                                  <td>5V</td>
+                             
+                              </tr>
+                              <tr>
+                                  <td>Cable Length:</td>
+                                  <td>5.00 m (16.4 ft)</td>
+                                  <td>Cable Length:</td>
+                                  <td>5.00 m (16.4 ft)</td>
+                             
+                              </tr>
+                              <tr>
+                                  <td>lnstallation Dimensions:</td>
+                                  <td>67.3 p3.5mm (2.66 p 0.14in)</td>
+                                  <td>lnstallation Dimensions:</td>
+                                  <td>67.3 p3.5mm (2.66 p 0.14in)</td>
+                             
+                              </tr>
+                              <tr>
+                                  <td>operation Temperature:</td>
+                                  <td>-20°C~85°C (-4*F to 185°F)</td>
+                                  <td>operation Temperature:</td>
+                                  <td>-20°C~85°C (-4*F to 185°F)</td>
+                             
+                              </tr>
+                              <tr>
+                                  <td>communication Protocol:</td>
+                                  <td>RS232</td>
+                                  <td>communication Protocol:</td>
+                                  <td>RS232</td>
+                             
+                              </tr>
+                              <tr>
+                                  <td>Input Voltage:</td>
+                                  <td>5V</td>
+                                  <td>Input Voltage:</td>
+                                  <td>5V</td>
+                             
+                              </tr>
+                              <tr>
+                                  <td>standby Power Consumption:</td>
+                                  <td>0.04w</td>
+                                  <td>standby Power Consumption:</td>
+                                  <td>0.04w</td>             
+                              </tr>
+                             </table>
+                </div>
+            </div>
         </div>
     </div>
     <div class="slide slide6">
         <h1 class="title">You may like
-            <span >Feed back on our suggestion</span>
+           
         </h1>
         <div class="slide6-container">
             <div class="recommend">
