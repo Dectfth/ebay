@@ -35,7 +35,7 @@
         .description::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
             border-radius: 8px;
             -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-            background:  rgba(0,0,0,.2);
+            background:  rgba(0,0,0,.1);
             }
         .description::-webkit-scrollbar-track {/*滚动条里面轨道*/
             -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
@@ -195,15 +195,28 @@
             cursor: pointer;
             visibility:visible;
             color:#333;
+            overflow-x: hidden;
+        }
+        .slide1 .menu .shipping-word::-webkit-scrollbar{
+            width:12px;
+      
+        }
+        .slide1 .menu .shipping-word::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background:  rgba(0,0,0,.2);
+            }
+        .slide1 .menu .shipping-word::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+      
+            background: #EDEDED;
         }
         .slide1 .menu .shipping-word{
             background-color: #fff;
             width: 100%;
             height: 600px;
             overflow-x: hidden;
-    
-            border: 5px solid rgba(0,0,0,.3);
-
+            border: 3px solid rgba(0,0,0,.3);
             background: #FFF;
             position: absolute;
             top: 54px;
@@ -1903,6 +1916,8 @@
                             <details>
                                 <summary>Should I wire the panels in series or parallel using MPPT charge controller?</summary>
                                 <p>The panels can be wired either in series or parallel or combination of series/parallel using MPPT charge controller.</p>
+                                <p>The panels can be wired either in series or parallel or combination of series/parallel using MPPT charge controller.</p>
+                               <!-- 要加收起，折叠的动画的话需要把p写到外面例子： https://www.lcgod.com/articles/88-->
                             </details>
                             <details>
                                 <summary>Can I connect an inverter to the load terminal?</summary>
@@ -2091,3 +2106,10 @@
 </body>
 
 </html>
+
+<!-- 
+    tips:
+ 1、   换颜色。 颜色未给
+ 2、manual 搞成图片滚动条的形式展示  pdf变成图片，图片未给
+ 3、faq 写完了
+ -->
