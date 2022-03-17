@@ -42,7 +42,7 @@
       
             background: #EDEDED;
         }
-        p,h1,h2, h3{
+        p,h1,h2, h3,h4{
             margin: 0;
             padding: 0;
         }
@@ -921,47 +921,43 @@
             align-items: center;
             flex-direction: column;
         }
-        .faq-container section{
+        .faq-container ul{
             /* width: 700px; */
             width: 100%;
-            margin: 5px;
-            box-shadow: 0 5px 10px #3334;
+            margin: 5px 5px 50px 5px;
+            box-shadow: 1px 4px 10px #3334;
+          
         }
-        .faq-container section details summary{
+        .faq-container ul li{
+            margin-top: 40px;
+        }
+        .faq-container ul li h4{
             padding: 15px;
             background-color: #14BAE4;
             color: #fff;
             position: relative;
             list-style: none;
             outline: none;
-            cursor: pointer;
+            
             font-size: 20px;
         }
-        .faq-container section details p{
-            font-size: 15px;
-            padding: 10px;
+        .faq-container ul li p{
+            font-size: 16px;
+            padding:10px;
             color: #444;
             background-color: #e6ffff;
 
         }
-        .faq-container section details summary{
-            margin-top: 100px;
-        }
-        .faq-container section details summary::after{
+
+        .faq-container h4::after{
             content: '+';
             position: absolute;
             top: 10px; 
             right: 15px;
             font-size: 30px;
             color: #fff;
-            transition: .4s linear;
         }
-        .faq-container section details[open] summary::after{
-            transform: rotate(135deg);
-        }
-        .faq-container section details[open] summary{
-            background: #006666;
-        }
+ 
 </style>
 </head>
 <body>
@@ -1748,28 +1744,26 @@
                 <div class="page_content" style="height: auto;" >
                     <div class="faq-container">
                         <h1>Q/A</h1>
-                        <section>
-                            <details>
-                                <summary>Should I wire the panels in series or parallel using MPPT charge controller?</summary>
+                        <ul>
+                            <li>
+                                <h4>Should I wire the panels in series or parallel using MPPT charge controller?</h4>
                                 <p>The panels can be wired either in series or parallel or combination of series/parallel using MPPT charge controller.</p>
-                                <p>The panels can be wired either in series or parallel or combination of series/parallel using MPPT charge controller.</p>
-                               <!-- 要加收起，折叠的动画的话需要把p写到外面例子： https://www.lcgod.com/articles/88-->
-                            </details>
-                            <details>
-                                <summary>Can I connect an inverter to the load terminal?</summary>
+                            </li>
+                            <li>
+                                <h4>Can I connect an inverter to the load terminal?</h4>
                                 <p>The load terminal is only compatible to run one small 12 V DC load with low amp consumption. All the other devices and appliance with surge and high amp draw should be connected directly to the battery.</p>
-                            </details>
-                            <details>
-                                <summary>Can I change/adjust the charging parameters on MPPT charge controllers?</summary>
+                            </li>
+                            <li>
+                                    <h4>Can I change/adjust the charging parameters on MPPT charge controllers?</h4>
                                 <p>MPPT charge controllers offer a USER setting, this USER setting will allow you to program your own charging parameters, such as Boost voltage and Float voltage.</p>
-                            </details>
-                            <details>
-                                <summary>Can I cover or mount the charge controller in an enclosed box?</summary>
+                            </li>
+                            <li>
+                                <h4>Can I cover or mount the charge controller in an enclosed box?</h4>
                                 <p>The Charge controller will convert the excess voltage into heat and dissipate into air.
                 
                                     Therefore, it should be mounted in a well-ventilated area with 9-Inch clearance around the charge controller.</p>
-                            </details>
-                        </section>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
