@@ -936,12 +936,22 @@
             cursor: pointer;
             font-size: 20px;
         }
-        .faq-container section details p{
-            font-size: 15px;
+        .faq-container section ul p{
+            font-size: 18px;
             padding: 10px;
             color: #444;
             background-color: #e6ffff;
 
+        }
+        ul {
+            max-height: 0;
+            padding:0;
+            margin-top:0;
+            transition: .4s cubic-bezier(0.39, 0.58, 0.57, 1);
+            overflow: hidden;
+        }
+        .faq-container section details[open] + ul {
+            max-height: 300px;
         }
         .faq-container section details summary{
             margin-top: 100px;
@@ -1914,25 +1924,46 @@
                         <h1>Q/A</h1>
                         <section>
                             <details>
-                                <summary>Should I wire the panels in series or parallel using MPPT charge controller?</summary>
-                                <p>The panels can be wired either in series or parallel or combination of series/parallel using MPPT charge controller.</p>
-                                <p>The panels can be wired either in series or parallel or combination of series/parallel using MPPT charge controller.</p>
-                               <!-- 要加收起，折叠的动画的话需要把p写到外面例子： https://www.lcgod.com/articles/88-->
+                                <!-- 问题 -->
+                                <summary>Q1.Should I wire the panels in series or parallel using MPPT charge controller?</summary> 
                             </details>
+                            <!-- 回答 -->
+                            <ul>
+                                <li>
+                                    <p>The panels can be wired either in series or parallel or combination of series/parallel using MPPT charge controller.</p>
+                                    <p>The panels can be wired either in series or parallel or combination of series/parallel using MPPT charge controller.</p>
+                                </li>
+                            </ul>
                             <details>
-                                <summary>Can I connect an inverter to the load terminal?</summary>
-                                <p>The load terminal is only compatible to run one small 12 V DC load with low amp consumption. All the other devices and appliance with surge and high amp draw should be connected directly to the battery.</p>
+                                <summary>Q2.Can I connect an inverter to the load terminal?</summary>
                             </details>
+                            <ul>
+                                <li>
+                                    <p>The load terminal is only compatible to run one small 12 V DC load with low amp consumption. All the other devices and appliance with surge and high amp draw should be connected directly to the battery.</p>
+
+                                </li>
+                            </ul>
                             <details>
                                 <summary>Can I change/adjust the charging parameters on MPPT charge controllers?</summary>
-                                <p>MPPT charge controllers offer a USER setting, this USER setting will allow you to program your own charging parameters, such as Boost voltage and Float voltage.</p>
                             </details>
+                            <ul>
+                                <li>
+                                    <p>MPPT charge controllers offer a USER setting, this USER setting will allow you to program your own charging parameters, such as Boost voltage and Float voltage.</p>
+
+                                </li>
+                            </ul>
                             <details>
                                 <summary>Can I cover or mount the charge controller in an enclosed box?</summary>
-                                <p>The Charge controller will convert the excess voltage into heat and dissipate into air.
-                
-                                    Therefore, it should be mounted in a well-ventilated area with 9-Inch clearance around the charge controller.</p>
+                               
                             </details>
+                            <ul>
+                                <li>
+                                    <p>The Charge controller will convert the excess voltage into heat and dissipate into air.
+                
+                                        Therefore, it should be mounted in a well-ventilated area with 9-Inch clearance around the charge controller.</p>
+
+                                </li>
+                            </ul>
                         </section>
                     </div>
                 </div>
@@ -2109,7 +2140,7 @@
 
 <!-- 
     tips:
- 1、   换颜色。 颜色未给
+ 1、换颜色。 颜色未给
  2、manual 搞成图片滚动条的形式展示  pdf变成图片，图片未给
- 3、faq 写完了
+ 3、faq 写完了 要加动画就要改html~
  -->
